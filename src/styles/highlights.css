@@ -1,5 +1,4 @@
 
-
 .highlight-card{
     color: #000000;
     text-align: left;
@@ -10,6 +9,8 @@
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 100px !important;
     
 }
 .highlight-card::before{
@@ -27,11 +28,21 @@
 
 .h-card-left{
     border-radius: 0px 100px 100px 0px;
-    border-left: 5px solid var(--green-color);
+    background-color: var(--green-color);
+    border-left: 5px solid #000;
+    color: white;
 }
 .h-card-right{
     border-radius: 100px 0px 0px 100px;
     border-right: 5px solid var(--green-color);
+}
+.h-card-right:hover{
+    background-color: var(--green-color);
+    color: white;
+}
+.h-card-left:hover{
+    background-color: #fff;
+    color: rgb(8, 8, 8);
 }
 .h-card-header{
     display: flex;

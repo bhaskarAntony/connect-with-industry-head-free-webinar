@@ -1,0 +1,11 @@
+
+.info-container{
+    min-height: 80vh;
+}
+.info-card{
+    background-color: #fff;
+    min-height: 300px;
+    border-radius: 100px;
+    padding: 10px;
+    line-height: 2;
+}

@@ -43,7 +43,7 @@ function Highlights() {
     <section className='highlights text-center mt-5' id='highlight'>
         <h1 className="heading text-dark mb-5">What is 3 Days<span className='text-main'> Free Trial</span></h1>
         <div className="container mt-3">
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column h-container">
             {
                 highlights.map((item, index)=>(
                     <div className={`highlight-card h-100 d-flex align-items-center ${index%2? 'align-self-end h-card-right':'align-self-start h-card-left'}`} data-aos = {` ${index%2? 'fade-left':'fade-left'}`}>
