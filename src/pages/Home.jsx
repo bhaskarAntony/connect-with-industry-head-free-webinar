@@ -14,7 +14,7 @@ function Home() {
   return (
     <div className='home'>
       <HomeHero/>
-      <Modules/>
+      {/* <Modules/> */}
       <Highlights/>
       <Enroll/>
       <Certificate/>

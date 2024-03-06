@@ -15,12 +15,12 @@ function HomeHero() {
      {/* <div className="blur1 d-none d-sm-none d-md-block"></div>
       <div className="blur2 d-none d-sm-none d-md-block"></div> */}
     
-          <p className='p-2 text-black bg-white rounded-5 mb-3 mt-3 d-inline-block'>AWS  Bootcamp</p>
-        <h1 className="heading-text  text-white mt-3 text-900 py-2">Secret Blueprint for  High-Paid <span className="text-main">AWS career</span></h1>
-        <div className="p-large text-white">Live Q&A Session With Experts, <br />Get Easiest Part To Learn complete AWS,  Get E-Certificate and Study Meterial</div>
+          <p className='px-2 text-black bg-white rounded-5 mt-3 d-inline-block'>3 Days free Trial</p>
+        <h1 className="heading-text  text-black mt-3 text-900 mb-2">Welcome To The Word Of<span className="text-main"> Unlimited Interviews</span></h1>
+        <div className="p-large text-black">Embark on an exploration of limitless conversations. Discover the art of interviewing without boundaries. Welcome to the world where every dialogue opens new horizons</div>
         <div className="date-container mt-5 text-start justify-content-start">
-            <button className="div-block-876"> <i class="bi bi-calendar2-event"></i>06th - 07th March 2024 </button>
-            <button className="div-block-876"> <i class="bi bi-alarm"></i> 7:30PM to 9:30PM</button>
+            <button className="main-btn px-5 fw-bold">Register Now</button>
+            {/* <button className="main-btn bg-dark text-white"> Contact Now</button> */}
         </div>
      </div>
       </div>
@@ -33,7 +33,8 @@ function HomeHero() {
    </div>
     </div>
   
-        <div className='container mt-5 text-start'>
+       <div className="bg-light py-5">
+       <div className='container mt-5 text-start'>
         <div className="row align-items-center justify-content-center">
      
       <div className="col-12 col-sm-12 col-md-6 col-lg-7 mb-3 order-2 order-sm-2 order-md-1">
@@ -45,6 +46,7 @@ function HomeHero() {
 
       </div>
         </div>
+       </div>
        <div className="text-center container-fluid">
         <div className="row d-flex justify-content-center">
             <div className="col-lg-6 col-12 col-md-8">

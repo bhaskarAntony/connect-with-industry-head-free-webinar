@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/highlights.css'
+import Aos from 'aos'
 
 const highlights = [
     {
@@ -35,15 +36,17 @@ const highlights = [
 ]
 
 function Highlights() {
+    useEffect(()=>{
+        Aos.init()
+    },[])
   return (
     <section className='highlights text-center mt-5' id='highlight'>
-        <h1 className="heading text-white mb-5">AWS   <br /> Bootcamp <span className='text-main'>Highlights</span></h1>
+        <h1 className="heading text-dark mb-5">What is 3 Days<span className='text-main'> Free Trial</span></h1>
         <div className="container mt-3">
-            <div className="row">
+            <div className="d-flex flex-column">
             {
-                highlights.map((item)=>(
-                    <div className="col-6 col-md-6 col-lg-4 mb-3">
-                        <div className="highlight-card h-100">
+                highlights.map((item, index)=>(
+                    <div className={`highlight-card h-100 d-flex align-items-center ${index%2? 'align-self-end h-card-right':'align-self-start h-card-left'}`} data-aos = {` ${index%2? 'fade-left':'fade-left'}`}>
                             <div className="h-card-header text-center">
                                 <img src={item.image} alt="" className="" />
                             </div>
@@ -51,7 +54,6 @@ function Highlights() {
                                 <h1 className="p-large-xl text-700"> <i class="bi bi-stars  mx-2"></i>{item.title}</h1>
                                 <p className="p-large">{item.content}</p>
                             </div>
-                        </div>
                     </div>
                 ))
             }

@@ -338,14 +338,15 @@ function Registration() {
         loading ? <LoadingModal/> : null
 }
        <div className="registration-form-container text-center rounded-3">
-                <div className="card register-form rounded-3">
-                    <div className="card-header text-start">
-                    <h1 className="p-large-xl text-white">Enroll Our <br />AWS Bootcamp</h1>
+                <div className="card register-form rounded-3 border-0">
+                    <div className="card-header text-start bg-students">
+                    {/* <h1 className="p-large-xl text-white">Enroll Our <br />AWS Bootcamp</h1>
             <div className="d-flex align-items-end">
             <h1 className="heading-text text-main mx-2">Free</h1>
             <h1 className="heading-subtitle text-white"><del className='text-danger'>&#8377;1000</del></h1>
            
-            </div>
+            </div> */}
+            <h1 className='fs-3 text-white'>Enroll 3 Days Free Trail</h1>
                     </div>
                     <div className="card-body bg-white">
                         <form action='post' autoComplete='false' onSubmit={submitHandler}>

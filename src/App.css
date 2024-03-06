@@ -7,6 +7,10 @@
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.bg-students{
+  background:linear-gradient(45deg, #0000003b, #000), url(https://img.freepik.com/free-photo/group-students-posing-with-notepads_23-2147666699.jpg?t=st=1709641132~exp=1709644732~hmac=e4ed2dff3ce8293c450164db9b88f6cc741499144be1cc8044eaf381e2f00dd1&w=740) no-repeat center bottom;
+  background-size: cover;
+}
 .text-main{
   color: var(--green-color);
 }
@@ -42,7 +46,7 @@
   background-color: var(--green-color);
   padding: 15px;
   font-size: 1.3rem;
-  color: #080808;
+  color: #ffffff;
   border-radius: 10px;
 }
 .div-block-876 {
@@ -56,6 +60,11 @@
   padding: 8px 12px;
   display: flex;
   color: #fff;
+}
+.accordion-header{
+  border: 2px solid #000;
+  cursor: pointer;
+  background-color: var(--green-color);
 }
 @media (max-width:600px){
   .registration{

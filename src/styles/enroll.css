@@ -1,6 +1,6 @@
 .enroll-card{
     min-height: 300px;
-    background-color: rgba(107, 107, 107, 0.225);
-    border: 1px solid rgba(223, 103, 239, 0.2);
+    /* background-color: rgba(107, 107, 107, 0.225); */
     padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }

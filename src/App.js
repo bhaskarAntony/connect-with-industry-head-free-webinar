@@ -34,7 +34,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {/* <Scroll/> */}
+    {/* <Scroll/> */}
      <BrowserRouter>
      <Header/>
       <ToastContainer autoClose={4000} position='top-right' />

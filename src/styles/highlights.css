@@ -1,39 +1,56 @@
 
 
 .highlight-card{
-    /* background: url('../images/low-poly-grid-haikei.svg') no-repeat center; */
-    background-size: cover;
     color: #000000;
     text-align: left;
-    border-radius: 20px;
-    margin-bottom: 30px;
     overflow: hidden;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    border: 1px solid #858585;
+    background-color: #fff;
+    width: fit-content;
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    
+}
+.highlight-card::before{
+    /* content: ""; */
+    position: absolute;
+    width: 50%;
+    height: 4px;
     background-color: var(--green-color);
+    right: 0;
+    bottom: 0;
+}
+.h-card-left:before{
+    left: 0;
+}
+
+.h-card-left{
+    border-radius: 0px 100px 100px 0px;
+    border-left: 5px solid var(--green-color);
+}
+.h-card-right{
+    border-radius: 100px 0px 0px 100px;
+    border-right: 5px solid var(--green-color);
 }
 .h-card-header{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 200px;
+
 }
 .h-card-header img{
-    width: 100px;
-    max-height: 100px !important;
+    width: 80px;
+    max-height: 80px !important;
+    background-color: #7ff0b255;
+    padding: 10px;
+    border-radius: 100px;
+    object-fit: contain;
 }
 .h-card-body{
-    background-color: #2d2d2d;
-    min-height: 150px;
     /* border-radius: 50px 50px 0 0; */
     display: flex;
     flex-direction: column;
     justify-content: end;
-    color: #fff;
     padding: 10px;
-    border: 1px solid #858585;
 }

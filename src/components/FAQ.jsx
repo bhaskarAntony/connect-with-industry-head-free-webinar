@@ -43,11 +43,11 @@ const allFaqs = {
 
 function FAQ() {
   return (
-    <section id='faq' className='p-3 p-lg-5'>
+    <section id='faq' className='p-3 p-lg-5 bg-light'>
         <div className="container-fluid mt-5">
           <div className="row">
             <div className="col-md-12">
-                <h1 className="text-center text-white mb-5">
+                <h1 className="text-center text-dark mb-5">
                     Frequently Asked <span className="text-main">Questions</span>
                 </h1>
             </div>
@@ -61,13 +61,13 @@ function FAQ() {
                           return (
                             <div className="accordion-item bg-transparent mt-2 mb-2" key={index}>
                               <div className="accordion-header ">
-                                <div className="accordion-button collapsed text-dark  border bg-main mb-1" data-bs-target={`#${item.title}`} data-bs-toggle="collapse">
+                                <div className="accordion-button collapsed text-dark  border-0 bg-main mb-1" data-bs-target={`#${item.title}`} data-bs-toggle="collapse">
                                     <h6 className="text-dark"> { item.quest } </h6>
                                 </div>
                               </div>
       
                               <div id={item.title} className="accordion-collapse collapse bg-white" data-bs-parent="#faq">
-                                  <div className="accordion body p-4">
+                                  <div className="accordion border-0 body p-4">
                                   
                                       <p className="text-black text-justify"> { item.ans } </p>
                                   </div>

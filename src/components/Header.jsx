@@ -4,7 +4,7 @@ import '../styles/header.css'
 function Header() {
   return (
     <header className='bg-dark'>
-      <marquee behavior="scroll" direction="right" scrollamount="10" className="m-0 bg-main">
+      {/* <marquee behavior="scroll" direction="right" scrollamount="10" className="m-0 bg-main">
         <div className="free-container d-flex gap-5 fs-5 m-0 fw-bold  text-white">
           <span>Free AWS  Bootcamp</span>
           <span>Free AWS  Bootcamp</span>
@@ -17,9 +17,8 @@ function Header() {
           <span>Free AWS  Bootcamp</span>
           <span>Free AWS  Bootcamp</span>
           <span>Free AWS  Bootcamp</span>
-         
         </div>
-      </marquee>
+      </marquee> */}
     <nav className="navbar navbar-expand-lg navbar-dark  p-3">
     <div className="container-fluid">
       <a className="navbar-brand" href="#home"><img src="https://res.cloudinary.com/dfogisedz/image/upload/v1696400519/webinar/wuxjubwtp8csymfqv28t.png" alt="" /> </a>
