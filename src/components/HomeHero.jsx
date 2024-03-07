@@ -16,10 +16,10 @@ function HomeHero() {
       <div className="blur2 d-none d-sm-none d-md-block"></div> */}
     
           <p className='px-2 text-black bg-white rounded-5 mt-3 d-inline-block'>3 Days free Trial</p>
-        <h1 className="heading-text  text-black mt-3 text-900 mb-2">Welcome To The Word Of<span className="text-main"> Unlimited Interviews</span></h1>
-        <div className="p-large text-black">Embark on an exploration of limitless conversations. Discover the art of interviewing without boundaries. Welcome to the world where every dialogue opens new horizons</div>
+        <h1 className="heading-text  text-black mt-3 text-900 mb-2" data-aos="zoom-out-up">Welcome To The Word Of<span className="text-main"> Unlimited Interviews</span></h1>
+        <div className="p-large text-black" data-aos="zoom-out-up">Embark on an exploration of limitless conversations. Discover the art of interviewing without boundaries. Welcome to the world where every dialogue opens new horizons</div>
         <div className="date-container mt-5 text-start justify-content-start">
-            <button className="main-btn px-5 fw-bold">Register Now</button>
+            <button className="main-btn px-5 fw-bold" data-aos="zoom-out-up">Register Now</button>
             {/* <button className="main-btn bg-dark text-white"> Contact Now</button> */}
         </div>
      </div>

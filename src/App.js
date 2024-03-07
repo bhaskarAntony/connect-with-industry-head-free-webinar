@@ -9,7 +9,8 @@ import Scroll from './components/Scroll';
 import { BrowserRouter, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
-ReactGA.initialize('G-SH0R0BXYK4');
+import Aos from 'aos';
+ReactGA.initialize('G-8Q24CRLCY8');
 
 function App() {
   ReactGA.event({
@@ -32,16 +33,22 @@ function App() {
       utm_campaign: utmCampaign,
     });
   }, []);
+  useEffect(()=>{
+    Aos.init()
+},[])
   return (
     <div className="App">
     {/* <Scroll/> */}
-     <BrowserRouter>
-     <Header/>
-      <ToastContainer autoClose={4000} position='top-right' />
-      <Home/>
-      {/* <FreeRegistration/> */}
-      <Footer/>
-     </BrowserRouter>
+    <Header/>
+    <div className='overflow-hidden'>
+    <BrowserRouter>
+     
+     <ToastContainer autoClose={4000} position='top-right' />
+     <Home/>
+     {/* <FreeRegistration/> */}
+     <Footer/>
+    </BrowserRouter>
+    </div>
 
     </div>
   );

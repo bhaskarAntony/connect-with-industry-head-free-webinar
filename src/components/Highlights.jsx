@@ -41,12 +41,12 @@ function Highlights() {
     },[])
   return (
     <section className='highlights text-center mt-5' id='highlight'>
-        <h1 className="heading text-dark mb-5">What is 3 Days<span className='text-main'> Free Trial</span></h1>
+        <h1 className="heading text-dark mb-5" data-aos="zoom-out-up">What is 3 Days<span className='text-main'> Free Trial</span></h1>
         <div className="container mt-3">
             <div className="d-flex flex-column h-container">
             {
                 highlights.map((item, index)=>(
-                    <div className={`highlight-card h-100 d-flex align-items-center ${index%2? 'align-self-end h-card-right':'align-self-start h-card-left'}`} data-aos = {` ${index%2? 'fade-left':'fade-left'}`}>
+                    <div className={`highlight-card h-100 d-flex align-items-center ${index%2? 'align-self-end h-card-right':'align-self-start h-card-left'}`} data-aos="fade-up">
                             <div className="h-card-header text-center">
                                 <img src={item.image} alt="" className="" />
                             </div>
@@ -60,7 +60,7 @@ function Highlights() {
             </div>
         </div>
         <div className="text-center mt-5">
-        <a href="#register" className='text-decoration-none'><button className="main-btn px-5 text-700">Register Now <del className='text-danger'>1000/-</del> <big>Free</big></button></a>
+        <a href="#register" className='text-decoration-none'><button className="main-btn px-5 text-700">Register Now for <big>Free</big></button></a>
         </div>
     </section>
   )

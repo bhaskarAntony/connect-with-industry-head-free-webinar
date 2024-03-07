@@ -1,31 +1,23 @@
 {
     "working":[
          {
-        "works":"Advanced proficiency in designing and managing AWS Cloud infrastructure"
+        "works":"Sessions are conducted in an interactive manner, allowing participants to engage with instructors, ask questions, and participate in discussions related to the topics covered."
     },
     {
-        "works":"Hands-on experience with Infrastructure as Code (IaC) using AWS CloudFormation and Terraform. "
+        "works":"Participants are given hands-on exercises and assignments to complete during the trial period. These exercises give participants practical experience and help them gauge their interest and aptitude for the subject matter."
     },
     {
-        "works":"Expertise in implementing and optimizing secure, scalable, and cost-effective cloud architectures.  "
+        "works":"Participants are provided access to learning materials such as slides, videos, and additional resources to supplement their learning during the trial period."
     },
         {
-            "works":"Expertise in implementing and optimizing secure, scalable, and cost-effective cloud architectures. "
+            "works":"Throughout the trial period, designated Q&A sessions are held where participants can clarify doubts, seek guidance, and interact with instructors and fellow participants."
         },
         {
-            "works":"Automation skills for efficient and consistent cloud deployments. • Insights into real-world case studies and best practices"
+            "works":"At the end of the trial period, participants are asked to provide feedback on their experience. This feedback helps in improving the content and delivery of future training programs."
 
         },
         {
-            "works":"Get your burning questions answered by industry experts in real time"
-        },
-        {
-            "works":"Learn from experts about the current job market's robust demand for careers in AWS "
-        },
-        {
-            "works":"Attend our Bootcamp conveniently from your own home"
+            "works":"Finally, participants are informed about the next steps they can take if they wish to continue their learning journey, such as enrolling in the full course, accessing additional resources, or joining a community of learners."
         }
-       
-
     ]
 }

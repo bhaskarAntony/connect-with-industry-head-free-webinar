@@ -3,10 +3,10 @@ import '../styles/enroll.css'
 
 function Enroll() {
   return (
-    <section className='enroll container py-5' id='enroll'>
+    <section className='enroll container py-5' id='enroll' >
         <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8 col-lg-6">
-            <div className="enroll-card">
+            <div className="enroll-card" data-aos="flip-left">
             <h1 className="heading-subtitle text-dark">Enroll Our <br />3 days Free Trial</h1>
             <div className="d-flex align-items-end">
             <h1 className="heading-text text-main mx-2">Free</h1>

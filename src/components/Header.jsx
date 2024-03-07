@@ -52,7 +52,7 @@ function Header() {
           </li>
           <li className="nav-item dropdown">
             <a className=" mx-2 main-btn px-3 py-2 text-decoration-none" href="#register">
-              Register Now <del className='text-danger'>&#8377;1000</del> Free
+              Register Now for Free
             </a>
           </li>
         </ul>

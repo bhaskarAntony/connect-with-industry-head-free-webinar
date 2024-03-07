@@ -5,39 +5,44 @@ const allFaqs = {
   "faq": [
     {
         "title": "quest1",
-        "quest": "How do I know whether this program is right for me? ",
-        "ans":  "After reviewing the information on the program landing page, we recommend you	 submit the short form above to gain access to the program. If you still have questions on whether this program is a good fit for you, please email admin@be-practical.com, and a dedicated program advisor will follow up with you very shortly. "
+        "quest": "What is the purpose of the 3-day free trial classes?",
+        "ans":  "The 3-day free trial classes are designed to give participants a glimpse into our software training programs, allowing them to experience our teaching style, course content, and instructor expertise before committing to the full course"
     },
     {
         "title": "quest2",
-        "quest": "Are there any prerequisites for this program? ",
-        "ans":  "Some programs do have prerequisites, While there are no strict prerequisites, participants should have basic knowledge of cloud computing concepts and familiarity with AWS services.  "
+        "quest": "How do I register for the free trial classes?",
+        "ans":  "You can register for the free trial classes by filling out the registration form on our website or contacting our registration team directly."
     },
     {
         "title": "quest3",
-        "quest": "What are the requirements to earn a certificate?  ",
-        "ans":  "This is a graded program. You must complete a combination of individual assignments, online test, and a final project. Each component carries a certain number of points, and a cumulative score of 60% percent is required to pass and obtain your professional certificate. "
+        "quest": "Is there any cost associated with the trial classes?",
+        "ans":  "No, the 3-day trial classes are completely free of charge. There are no hidden fees or obligations."
     },
     {
         "title": "quest4",
-        "quest": "Can I download the program videos?",
-        "ans":  "You can download video transcripts, assignment templates, readings, at the end of the workshop. However, the video lectures are only available for streaming and require an internet connection"
+        "quest": "What topics will be covered during the trial period?",
+        "ans":  "The trial classes will cover introductory topics in full-stack development, digital marketing, data science, and cloud computing/DevOps, giving participants a broad overview of each field."
     },
     {
         "title": "quest5",
-        "quest": "What type of certificate will I receive?",
-        "ans":  "The digital certificate will be sent after the program, once grading is complete. "
+        "quest": "Are the trial classes conducted online or in-person?",
+        "ans":  "Currently, the trial classes are conducted online through virtual classrooms to ensure accessibility for participants from anywhere."
     },
     {
         "title": "quest6",
-        "quest": "Can I get the hard copy of the certificate?",
-        "ans":  "No, only verified digital certificates will be issued upon successful completion. This allows you to share your credentials on social platforms such as LinkedIn, Facebook, and Twitter."
+        "quest": "What are the requirements to participate in the trial classes?",
+        "ans":  "There are no specific requirements to participate in the trial classes. However, having a basic understanding of computer operations and internet usage would be beneficial."
     },
     {
       "title": "quest7",
-      "quest": "Do I receive alumni status after completing this program?",
-      "ans":  "No, there is no alumni status granted for this program. In some cases, there are credits that count toward a higher level of certification. We provide alumni status for those who joined for full time program.  "
-  }
+      "quest": "Will I receive a certificate after completing the trial classes?",
+      "ans":  "As the trial classes are short introductory sessions, we do not provide certificates for completion. However, participants will receive a participation acknowledgment."
+  },
+  {
+    "title": "quest8",
+    "quest": "What happens after the trial period ends?",
+    "ans":  "At the end of the trial period, you will have the option to enroll in the full course if you wish to continue your learning journey with us. Our enrollment team will provide you with further information on how to proceed."
+},
 ]
 }
 
@@ -47,7 +52,7 @@ function FAQ() {
         <div className="container-fluid mt-5">
           <div className="row">
             <div className="col-md-12">
-                <h1 className="text-center text-dark mb-5">
+                <h1 className="text-center text-dark mb-5" data-aos="zoom-out-up">
                     Frequently Asked <span className="text-main">Questions</span>
                 </h1>
             </div>
@@ -59,7 +64,7 @@ function FAQ() {
                     {
                         allFaqs.faq.map((item,index) => {
                           return (
-                            <div className="accordion-item bg-transparent mt-2 mb-2" key={index}>
+                            <div className="accordion-item bg-transparent mt-2 mb-2" key={index}  data-aos="zoom-out-right">
                               <div className="accordion-header ">
                                 <div className="accordion-button collapsed text-dark  border-0 bg-main mb-1" data-bs-target={`#${item.title}`} data-bs-toggle="collapse">
                                     <h6 className="text-dark"> { item.quest } </h6>

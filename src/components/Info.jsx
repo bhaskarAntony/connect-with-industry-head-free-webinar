@@ -20,14 +20,14 @@ function Info() {
         <div className="row justify-content-center align-items-center">
             {
                 data.map((item,index)=>(
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4" data-aos="zoom-out-up">
                         {
                             index==1?(
                                 <img src={item.img} className='w-100'/>
                             ):(
                                 <>
                                  <div className={`info-card ${index%2==0?'info-card-left ':'info-card-right'}`}>
-                            <h1 className="fs-4">{item.title}</h1>
+                            <h1 className="fs-4 text-main">{item.title}</h1>
                             <p className="fs-6">{item.content}</p>
                         </div>
                                 </>

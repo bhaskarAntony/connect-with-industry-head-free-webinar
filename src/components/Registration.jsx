@@ -78,7 +78,8 @@ function Registration() {
         email: "",
         mobile: "",
         college: "",
-        year:""
+        year:"",
+        selectedCourse:"",
       });
       if(reg.coupon===null){
         setIsCoupon(false)
@@ -174,50 +175,17 @@ function Registration() {
           }
         }
       };
-    
-      // const sendEmail = async (name, email, mobile, coupon, influencer ) => {
-      //   try {
-      //     let data = Email(name, email, mobile, coupon, influencer);
-      //     let to = "admin@be-practical.com";
-      //     let sub = "Bootcamp Registration details";
-    
-      //     let final = {
-      //       to,
-      //       subject: sub,
-      //       content: data,
-      //     };
-    
-      //     setLoading(true);
-    
-      //     await axios
-      //       .post(`${URL}/api/send/mail`, final)
-      //       .then((res) => {
-            
-      //       })
-      //       .catch((err) => toast.error(err.message));
-      //   } catch (err) {
-      //     console.log(err.message);
-      //   }
-      // };
-    
-      // const checkCouponCode = (couponCode) => {
-      //   const influencer = influencers.find((i) => i.couponCode === couponCode);
-      //   return influencer ? influencer.email : null;
-      // };
+
     
       const submitHandler = async (e) => {
         setLoading(true)
           e.preventDefault();
-          // Perform final validation here
-          // if (influencers.length === 0) {
-          //   console.error('Influencers data is not available. Please handle this case.');
-          //   return;
-          // }
+
           try {
-              axios.post('https://stormy-flannel-nightgown-ox.cyclic.app/api/aws/register', reg)
+              axios.post('https://stormy-flannel-nightgown-ox.cyclic.app/api/coursetrial/register', reg)
               .then(response => {
                 setLoading(false)
-                
+                window.location.href =  `https://be-practical.com/${reg.selectedCourse}`
                 // Handle the response data here
                 toast.success("Thank you for registering to AWS Bootcamp")
                 setShowModal(true)
@@ -234,102 +202,7 @@ function Registration() {
             console.error('Error:', error);
             toast.error('An error occurred while creating the influencer. Please try again.');
           }
-      
-          // if (err) {
-          //     toast.error("Check your Details..");
-          // } else {
-          //     // Check if the entered coupon code matches an influencer's coupon code
-          //     // const influencer = influencers.find((i) => i.couponCode === reg.coupon);
-          //     // console.log("Coupon Code:", reg.coupon);
-          //     // console.log("Influencer Object:", influencer);
-  
-          //     // if (influencer) {
-          //     //     sendEmail(reg.name, reg.email, reg.mobile, reg.coupon, influencer.email);
-          //     // } else {
-          //     //     sendEmail(reg.name, reg.email, reg.mobile, reg.coupon, null);
-          //     // }
-      
-          //     // Send an email to the user
-          //     try {
-          //         let userData = UserEmail(reg.name);
-          //         let userTo = reg.email; // User's email address
-          //         let userSub = "Bootcamp Registration Confirmation";
-      
-          //         let userMail = {
-          //             to: userTo,
-          //             subject: userSub,
-          //             content: userData,
-          //         };
-      
-          //         setLoading(true);
-      
-          //         await axios
-          //             .post(`${URL}/api/send/mail`, userMail)
-          //             .then((res) => {
-          //                 setLoading(false);
-          //             })
-          //             .catch((err) => {
-          //                 setLoading(false);
-          //                 console.error("Error sending user email:", err.message);
-          //             });
-          //     } catch (err) {
-          //         console.error("Error sending user email:", err.message);
-          //     }
-      
-          //     // if (influencer) {
-          //     //     // If a match is found, send an email to the influencer's email address
-          //     //     console.log(influencer)
-          //     //     try {
-          //     //         let influencerData = InfluenceEmail(reg.name, reg.email, reg.mobile, reg.coupon, influencer.email);
-          //     //         let influencerTo = influencer.email; // Influencer's email address
-          //     //         let influencerSub = "User Registered with Your Coupon Code";
-
-          //     //         let influencerMail = {
-          //     //             to: influencerTo,
-          //     //             subject: influencerSub,
-          //     //             content: influencerData,
-          //     //         };
-      
-          //     //         setLoading(true);
-      
-          //     //         await axios
-          //     //             .post(`${URL}/api/send/mail`, influencerMail)
-          //     //             .then((res) => {
-          //     //                 setLoading(false);
-          //     //                 // You can add a toast or message here for the influencer
-                              
-          //     //             })
-          //     //             .catch((err) => {
-          //     //                 setLoading(false);
-          //     //                 console.error("Error sending influencer email:", err.message);
-          //     //                 toast.error("Failed to send influencer email. Please try again.");
-          //     //             });
-          //     //     } catch (err) {
-          //     //         console.error("Error sending influencer email:", err.message);
-          //     //     }
-          //     // }
-          //     // if(influencer){
-          //     //   setLoading(false);
-          //     //   toast.info("Yout Got 25% Discount To Complete registration. Pay Rs.149 to secure your spot on the Workshop.");
-          //     //   window.location.href = 'https://pages.razorpay.com/pl_Mq1jGcjBBFioeL/view';
-          //     // }
-          //     // else if(reg.coupon==="AMC" || reg.coupon==="ACSE"||reg.coupon==="kavitha"||reg.coupon=="UVCE"|| reg.coupon ==="GCEM"|| reg.coupon ==="DSCE"|| reg.coupon ==="BIET"||reg.coupon ==="BMSIT" || reg.coupon === "BPDS01" ||reg.coupon === "AIT" || reg.coupon === "SP01" || reg.coupon === "JHC" || reg.coupon === "MBCAC"|| reg.coupon === "BASKARANTONY123" || reg.coupon === "JNNC"){
-          //     //   setLoading(false);
-          //     //   setShowModal(true)
-          //     //   toast.info("thanks for registering for Python webianar and You got free registartion ,");
-          //     //   setReg({
-          //     //     name: "",
-          //     //     email: "",
-          //     //     mobile: "",
-          //     //     coupon: ""
-          //     //   })
-          //     // }
-          //     // else{
-          //     //   setLoading(false);
-          //     //   toast.info("To Complete registration. Pay Rs.199 to secure your spot on the Workshop.");
-          //     //   window.location.href = 'https://pages.razorpay.com/be-practial-webinar';
-          //     // }
-          // }
+          console.log(reg)
          
       };
   return (
@@ -338,7 +211,7 @@ function Registration() {
         loading ? <LoadingModal/> : null
 }
        <div className="registration-form-container text-center rounded-3">
-                <div className="card register-form rounded-3 border-0">
+                <div className="card register-form rounded-3 border-0"  data-aos="zoom-out">
                     <div className="card-header text-start bg-students">
                     {/* <h1 className="p-large-xl text-white">Enroll Our <br />AWS Bootcamp</h1>
             <div className="d-flex align-items-end">
@@ -368,15 +241,24 @@ function Registration() {
                     { err && mobileErr ? <p className="text-danger text-start"> { mobileErr } </p> : null }
                                  </div>
                             </div>
-                            <div className="form-group mt-2">
+                            <div className="form-group">
                               <div className="row">
-                                <div className="col-12 col-md-7">
+                                <div className="col-12 col-md-7 mt-2">
                                 <input type="text" className="form-control p-3" name='college' placeholder='College name'   value={reg.college} onChange={readValue}  required />
                                 </div>
-                                <div className="col-12 col-md-5">
+                                <div className="col-12 col-md-5 mt-2">
                                 <input type="number" className="form-control p-3" name='year' placeholder='year of Passing'  value={reg.year} onChange={readValue} required />
                                 </div>
                               </div>
+                            </div>
+                            <div className="form-group mt-2">
+                            <select onChange={readValue} value={reg.selectedCourse} name="selectedCourse" className="form-select" required>
+                            <option value="">Select Course</option>
+                            <option value="mern-stack-development-training">MERN Fullstack</option>
+                            <option value="python-fullstack">PYTHON Fullstack</option>
+                            <option value="java-fullstack-developer-course">Java Fullstack</option>
+                            {/* Add more options for other courses if needed */}
+                          </select>
                             </div>
                               
                             <div className="form-group mt-5">
