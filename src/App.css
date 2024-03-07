@@ -129,11 +129,7 @@
 .modal{
   backdrop-filter: blur(10px);
 }
-.modal-body img{
-  width: 200px;
-  height: 200px;
-  animation: anim 1s ease-in-out infinite alternate;
-}
+
 @keyframes anim{
   from{
       transform: scale(0.9);

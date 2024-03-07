@@ -24,25 +24,22 @@ const LoadingModal = () => {
   const SpecialMessageModal = ({ show, onClose }) => {
     return (
       show && (
-        <div className="modal" style={{ display: show ? 'block' : 'none' }}>
+        <div className="modal border-0" style={{ display: show ? 'block' : 'none' }}>
           <div className="modal-dialog ">
-            <div className="modal-content bg-black">
-              <div className="modal-header">
+            <div className="modal-content bg-white">
+              {/* <div className="modal-header">
                 <h5 className="modal-title text-success">Confirmation</h5>
                 <button type="button" className="close btn" onClick={onClose}>
                   <span className='fs-1 text-white'>&times;</span>
                 </button>
-              </div>
+              </div> */}
               <div className="modal-body d-flex align-items-center justify-content-center flex-column gap-3">
-                x
-              <img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/746/small/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.png" alt="success" />
-              <p className='fs-4 text-white mt-4'>
-             New Message to Confirm.
+                
+              <img src="https://i.pinimg.com/originals/e8/06/52/e80652af2c77e3a73858e16b2ffe5f9a.gif" alt="success" className='w-100 rounded-3'/>
+              <p className='fs-4 text-dark mt-4'>
+              3 Days Free Trial Registration is Success
               </p>
-              <p className='fs-5 text-white'>
-              Confirm Here For free MERN Fullstack Development Bootcamp
-              </p>
-              <Link to="https://chat.whatsapp.com/LrX7M5Ro9al8DOKdf89zWN" target="_blank" className='btn bg-succss text-white p-3 w-100 d-block' style={{"backgroundColor":"green"}}>Confirm Registration</Link>
+              <button className='btn bg-succss text-white p-3 w-100 d-block' style={{"backgroundColor":"#3bd382"}} onClick={onClose}>Confirm Registration</button>
                </div>
             </div>
           </div>
@@ -185,7 +182,9 @@ function Registration() {
               axios.post('https://stormy-flannel-nightgown-ox.cyclic.app/api/coursetrial/register', reg)
               .then(response => {
                 setLoading(false)
-                window.location.href =  `https://be-practical.com/${reg.selectedCourse}`
+             if(reg.selectedCourse!=""){
+              window.location.href =  `https://be-practical.com/${reg.selectedCourse}`
+             }
                 // Handle the response data here
                 toast.success("Thank you for registering to AWS Bootcamp")
                 setShowModal(true)
@@ -252,11 +251,26 @@ function Registration() {
                               </div>
                             </div>
                             <div className="form-group mt-2">
-                            <select onChange={readValue} value={reg.selectedCourse} name="selectedCourse" className="form-select" required>
-                            <option value="">Select Course</option>
+                            <select onChange={readValue} value={reg.selectedCourse} name="selectedCourse" className="form-select p-3" required>
+                            <option value="" className='p-3' disabled selected>Select Course</option>
+                            <hr />
+                            <optgroup label='Fullstack courses'>
                             <option value="mern-stack-development-training">MERN Fullstack</option>
                             <option value="python-fullstack">PYTHON Fullstack</option>
                             <option value="java-fullstack-developer-course">Java Fullstack</option>
+                            </optgroup>
+                            <hr />
+                            
+                            <option value="data-science-course-in-bangalore">Data Science</option>
+                            <hr />
+                            <option value="advanced-digital-marketing-program">Digital Marketing</option>
+                            <hr />
+                          <optgroup label='Cloud computing courses'>
+                          <option value="advanced-cloud-computing-aws">Adwanced Cloud Computing</option>
+                            <option value="cloudops-devops-course-in-bangalore">CloudOops</option>
+                          </optgroup>
+                          <hr />
+                            <option value="job-guaranteed-courses-in-bangalore">Job Guaranteed Courses</option>
                             {/* Add more options for other courses if needed */}
                           </select>
                             </div>
