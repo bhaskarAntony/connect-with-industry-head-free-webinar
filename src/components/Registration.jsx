@@ -8,6 +8,7 @@ import InfluenceEmail from '../template/influence';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 const URL = "https://email-api-r1kd.onrender.com"
+import success from '../images/success.gif'
 
 
 const LoadingModal = () => {
@@ -35,7 +36,7 @@ const LoadingModal = () => {
               </div> */}
               <div className="modal-body d-flex align-items-center justify-content-center flex-column gap-3">
                 
-              <img src="https://i.pinimg.com/originals/e8/06/52/e80652af2c77e3a73858e16b2ffe5f9a.gif" alt="success" className='w-100 rounded-3'/>
+              <img src= {success} alt="success" className='w-100 rounded-3'/>
               <p className='fs-4 text-dark mt-4'>
               3 Days Free Trial Registration is Success
               </p>
