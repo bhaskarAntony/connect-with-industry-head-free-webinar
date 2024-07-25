@@ -38,7 +38,7 @@ const LoadingModal = () => {
                 
               <img src= {success} alt="success" className='w-100 rounded-3'/>
               <p className='fs-4 text-dark mt-4'>
-            Free webinar Registration is Success
+            Free webinar Registration is Success..
               </p>
               <button className='btn bg-succss text-white p-3 w-100 d-block' style={{"backgroundColor":"#3bd382"}} onClick={onClose}>Close</button>
                </div>
