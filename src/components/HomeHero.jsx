@@ -7,7 +7,7 @@ import  profile from '../images/pp2.jpg'
 
 function HomeHero() {
   return (
-    <section className='hero text-start p-3 p-md-5 container-fluid' id='home'>
+    <section className='hero text-start p-2 p-md-5 container-fluid' id='home'>
     <div className="container-fluid">
     <div className="row align-items-center">
     <div className="col-12 col-md-8">
