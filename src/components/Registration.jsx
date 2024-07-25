@@ -30,7 +30,7 @@ const LoadingModal = () => {
             <div className="modal-content bg-white">
               {/* <div className="modal-header">
                 <h5 className="modal-title text-success">Confirmation</h5>
-                <button type="button" className="close btn" onClick={onClose}>
+                <button type="button" className="close btn" >
                   <span className='fs-1 text-white'>&times;</span>
                 </button>
               </div> */}
@@ -38,9 +38,9 @@ const LoadingModal = () => {
                 
               <img src= {success} alt="success" className='w-100 rounded-3'/>
               <p className='fs-4 text-dark mt-4'>
-              3 Days Free Trial Registration is Success
+            Free webinar Registration is Success
               </p>
-              <button className='btn bg-succss text-white p-3 w-100 d-block' style={{"backgroundColor":"#3bd382"}} onClick={onClose}>Confirm Registration</button>
+              <button className='btn bg-succss text-white p-3 w-100 d-block' style={{"backgroundColor":"#3bd382"}} onClick={onClose}>Close</button>
                </div>
             </div>
           </div>
@@ -72,12 +72,11 @@ function Registration() {
       axios.get('')
     },[])
     const [reg, setReg] = useState({
-        name: "",
+        StudentName: "",
         email: "",
-        mobile: "",
-        college: "",
-        year:"",
-        selectedCourse:"",
+        phonenumber: "",
+        CollegeName: "",
+        YearOfPassing:"",
       });
       if(reg.coupon===null){
         setIsCoupon(false)
@@ -90,13 +89,13 @@ function Registration() {
     
       const readValue = (e) => {
         const { name, value } = e.target;
-        if (name === "name") {
+        if (name === "StudentName") {
           validateName(value);
         }
         if (name === "email") {
           validateEmail(value);
         }
-        if (name === "mobile") {
+        if (name === "phonenumber") {
           validateMobile(value);
         }
         if (name === "coupon") {
@@ -180,12 +179,12 @@ function Registration() {
           e.preventDefault();
 
           try {
-              axios.post('https://stormy-flannel-nightgown-ox.cyclic.app/api/coursetrial/register', reg)
+              axios.post('https://register-backend-gaa6.onrender.com/api/register/add', reg)
               .then(response => {
                 setLoading(false)
-             if(reg.selectedCourse!=""){
-              window.location.href =  `https://be-practical.com/${reg.selectedCourse}`
-             }
+            //  if(reg.selectedCourse!=""){
+            //   window.location.href =  `https://be-practical.com/${reg.selectedCourse}`
+            //  }
                 // Handle the response data here
                 toast.success("Thank you for registering to AWS Bootcamp")
                 setShowModal(true)
@@ -219,12 +218,12 @@ function Registration() {
             <h1 className="heading-subtitle text-white"><del className='text-danger'>&#8377;1000</del></h1>
            
             </div> */}
-            <h1 className='fs-3 text-white'>Enroll 3 Days Free Trail</h1>
+            <h1 className='fs-3 text-white'>Enroll Free Online Webinar</h1>
                     </div>
                     <div className="card-body bg-white">
                         <form action='post' autoComplete='false' onSubmit={submitHandler}>
                             <div className="form-group mt-2">
-                                <input type="text" className="form-control p-3" name='name' placeholder='Enter Name' value={reg.name} onChange={readValue} required />
+                                <input type="text" className="form-control p-3" name='StudentName' placeholder='Enter Name' value={reg.name} onChange={readValue} required />
                                 <div>
                     { err && nameErr ? <p className="text-danger text-start"> { nameErr } </p> : null }
                              </div>
@@ -236,47 +235,24 @@ function Registration() {
                               </div>
                             </div>
                             <div className="form-group mt-2">
-                                <input type="text" className="form-control p-3"  name='mobile' placeholder='Enter Mobile Number' value={reg.mobile} onChange={readValue} required/>
+                                <input type="text" className="form-control p-3"  name='phonenumber' placeholder='Enter Mobile Number' value={reg.mobile} onChange={readValue} required/>
                                 <div>
                     { err && mobileErr ? <p className="text-danger text-start"> { mobileErr } </p> : null }
                                  </div>
                             </div>
                             <div className="form-group">
                               <div className="row">
-                                <div className="col-12 col-md-7 mt-2">
-                                <input type="text" className="form-control p-3" name='college' placeholder='College name'   value={reg.college} onChange={readValue}  required />
+                                <div className="col-12 col-md-12 mt-2">
+                                <input type="text" className="form-control p-3" name='CollegeName' placeholder='College name'   value={reg.college} onChange={readValue}  required />
                                 </div>
-                                <div className="col-12 col-md-5 mt-2">
-                                <input type="number" className="form-control p-3" name='year' placeholder='year of Passing'  value={reg.year} onChange={readValue} required />
+                                <div className="col-12 col-md-12 mt-2">
+                                <input type="number" className="form-control p-3" name='YearOfPassing' placeholder='year of Passing'  value={reg.year} onChange={readValue} required />
                                 </div>
                               </div>
                             </div>
-                            <div className="form-group mt-2">
-                            <select onChange={readValue} value={reg.selectedCourse} name="selectedCourse" className="form-select p-3" required>
-                            <option value="" className='p-3' disabled selected>Select Course</option>
-                            <hr />
-                            <optgroup label='Fullstack courses'>
-                            <option value="mern-stack-development-training">MERN Fullstack</option>
-                            <option value="python-fullstack">PYTHON Fullstack</option>
-                            <option value="java-fullstack-developer-course">Java Fullstack</option>
-                            </optgroup>
-                            <hr />
-                            
-                            <option value="data-science-course-in-bangalore">Data Science</option>
-                            <hr />
-                            <option value="advanced-digital-marketing-program">Digital Marketing</option>
-                            <hr />
-                          <optgroup label='Cloud computing courses'>
-                          <option value="advanced-cloud-computing-aws">Adwanced Cloud Computing</option>
-                            <option value="cloudops-devops-course-in-bangalore">CloudOops</option>
-                          </optgroup>
-                          <hr />
-                            <option value="job-guaranteed-courses-in-bangalore">Job Guaranteed Courses</option>
-                            {/* Add more options for other courses if needed */}
-                          </select>
-                            </div>
+                          
                               
-                            <div className="form-group mt-5">
+                            <div className="form-group mt-3">
                                <button type="submit" className='main-btn text-white  w-100 bg-dark '>Register <i class="bi bi-hand-index-thumb"></i></button>
                             </div>
                         </form>

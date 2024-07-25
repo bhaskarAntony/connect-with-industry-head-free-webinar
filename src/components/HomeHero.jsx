@@ -3,21 +3,26 @@ import '../styles/Homehero.css'
 import Registration from './Registration'
 import OfferEnds from './OfferEnds'
 import Works from './Works'
+import  profile from '../images/pp2.jpg'
 
 function HomeHero() {
   return (
     <section className='hero text-start p-0 container-fluid' id='home'>
     <div className="container-fluid">
-    <div className="row">
-    <div className="col-12 col-md-6">
+    <div className="row align-items-center">
+    <div className="col-12 col-md-8">
       <div className="hero-left">
       <div className=" text-left p-lg-4 p-3">
      {/* <div className="blur1 d-none d-sm-none d-md-block"></div>
       <div className="blur2 d-none d-sm-none d-md-block"></div> */}
     
-          <p className='px-2 text-black bg-white rounded-5 mt-3 d-inline-block'>3 Days free Trial</p>
-        <h1 className="heading-text  text-black mt-3 text-900 mb-2" data-aos="zoom-out-up">Welcome To The Word Of<span className="text-main"> Unlimited Interviews</span></h1>
-        <div className="p-large text-black" data-aos="zoom-out-up">Embark on an exploration of limitless conversations. Discover the art of interviewing without boundaries. Welcome to the world where every dialogue opens new horizons</div>
+          {/* <p className='px-2 text-black bg-white rounded-5 mt-3 d-inline-block'>free webinar</p> */}
+        <h1 className="heading-text  text-black mt-3 text-900 mb-2" data-aos="zoom-out-up"> Online Webinar - <span className="text-main"> Connect with Industry Heads</span></h1>
+        <p className="fs-5"><span className="text-main">Speaker:</span> Mr. Gururaj Godakindi, Global Program Manager at HCL Technologies</p>
+        <div className="p-large text-secondary" data-aos="zoom-out-up">Discover the art of interviewing without boundaries. Welcome to a world where every dialogue opens new horizons. Join us in this insightful webinar to connect with industry heads and gain invaluable knowledge.</div>
+        <div className="btns mt-5">
+          <button className="btn btn-dark rounded-pill fw-bold"><i class="bi bi-calendar-check text-main"></i> 27th July 2024, <i class="bi bi-stopwatch text-main"></i> 11:00 AM - 11:45 AM</button>
+        </div>
         <div className="date-container mt-5 text-start justify-content-start">
             <button className="main-btn px-5 fw-bold" data-aos="zoom-out-up">Register Now</button>
             {/* <button className="main-btn bg-dark text-white"> Contact Now</button> */}
@@ -25,9 +30,9 @@ function HomeHero() {
      </div>
       </div>
     </div>
-    <div className="col-12 col-md-6">
+    <div className="col-12 col-md-4">
       <div className="hero-right">
-        <img src="https://demoapus1.com/skillup/wp-content/uploads/2022/04/side-2-768x731.png" alt="" className="w-100" />
+      <img src={profile} alt="" className="w-100" />
       </div>
     </div>
    </div>

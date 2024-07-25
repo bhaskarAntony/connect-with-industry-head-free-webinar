@@ -4,36 +4,32 @@ import Aos from 'aos'
 
 const highlights = [
     {
-        image:"https://cdn-icons-png.flaticon.com/128/10789/10789560.png",
-        title:"Actionable Knowledge",
-        content:"Acquire valuable, hands-on insights to launch your  career in AWS  effectively"
+        image: "https://cdn-icons-png.flaticon.com/128/10789/10789560.png",
+        title: "Overview on HCL",
+        content: "Gain insights into HCL's role in the IT industry and understand their operational framework."
     },
     {
-        image:"https://cdn-icons-png.flaticon.com/128/7257/7257539.png",
-        title:"Q&A Sessions",
-        content:"Get your burning questions answered by industry experts in real time"
+        image: "https://cdn-icons-png.flaticon.com/128/9464/9464456.png",
+        title: "Industry Expectations for IT Freshers",
+        content: "Learn about the current expectations and skills required by the industry for fresh IT graduates."
     },
     {
-        image:"https://cdn-icons-png.flaticon.com/128/9464/9464456.png",
-        title:"Industry Demand",
-        content:"Learn from experts about the current job market's robust demand for careers in AWS "
+        image: "https://cdn-icons-png.flaticon.com/128/7257/7257539.png",
+        title: "HR Hiring Process",
+        content: "Understand the HR hiring process, including what HR professionals look for during interviews and evaluations."
     },
     {
-        image:"https://cdn-icons-png.flaticon.com/128/11060/11060995.png",
-        title:"Flexible Learning",
-        content:"Attend our Bootcamp conveniently from your own home"
+        image: "https://cdn-icons-png.flaticon.com/128/11060/11060995.png",
+        title: "Q&A Sessions",
+        content: "Participate in interactive Q&A sessions to get your questions answered by industry experts in real time."
     },
     {
-        image:"https://cdn-icons-png.flaticon.com/128/3660/3660781.png",
-        title:"Engage and Connect",
-        content:"Interact with seasoned industry professionals and fellow enthusiasts for an interactive learning experience"
-    },
-    {
-        image:"https://cdn-icons-png.flaticon.com/128/3387/3387740.png",
-        title:"E-Certificate and study Material",
-        content:"We offer E-certificates upon completion of the Bootcamp and provide study materials"
-    },
-]
+        image: "https://cdn-icons-png.flaticon.com/128/3660/3660781.png",
+        title: "Flexible Learning",
+        content: "Attend the webinar conveniently from your own home, with sessions designed to fit your schedule."
+    }
+];
+
 
 function Highlights() {
     useEffect(()=>{
@@ -41,7 +37,7 @@ function Highlights() {
     },[])
   return (
     <section className='highlights text-center mt-5' id='highlight'>
-        <h1 className="heading text-dark mb-5" data-aos="zoom-out-up">What is 3 Days<span className='text-main'> Free Trial</span></h1>
+        <h1 className="heading text-dark mb-5" data-aos="zoom-out-up">What is Connect with <span className='text-main'> Industry Heads Webinar</span></h1>
         <div className="container mt-3">
             <div className="d-flex flex-column h-container">
             {

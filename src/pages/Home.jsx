@@ -18,10 +18,10 @@ function Home() {
       <Info/>
       <Highlights/>
       <Enroll/>
-      <Certificate/>
+      {/* <Certificate/> */}
       {/* <About/>     */}
       
-      <Enroll/>
+      {/* <Enroll/> */}
       <FAQ/>
 
     </div>

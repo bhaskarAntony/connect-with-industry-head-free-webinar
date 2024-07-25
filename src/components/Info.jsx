@@ -3,15 +3,17 @@ import '../styles/info.css'
 
 const data = [
     {
-        title:"Unlock Your Potential: Free Trial for Our Software Training",
-        content:"Embark on a journey of skill enhancement with our free trial offer for software training. Before committing to the full program, experience the power of our training modules firsthand. Dive into interactive lessons, hands-on exercises, and expert guidance to elevate your proficiency. Start your learning adventure today and unlock your full potentia"
+        title: "Overview on HCL and IT Industry & Q&A Session",
+        content: "Get a comprehensive overview of HCL and its role within the IT industry. Understand HCL’s operations, industry standards, and how they align with current market trends. Participate in interactive Q&A sessions where you can ask questions and get answers from industry experts in real time.",
+      
     },
     {
         img:"https://img.freepik.com/free-vector/peace-mind-concept-illustration_114360-7308.jpg?t=st=1709727345~exp=1709730945~hmac=58d094db3b0c5a0cfc0e14ada42a938e78fd799606741ab94a1b67230d1a61f3&w=740"
     },
     {
-        title:"Experience Excellence: Try Our Software Training for Free trial",
-        content:"Elevate your skills with our complimentary trial of software training. Dive into our comprehensive modules, designed to empower learners of all levels. From beginners to advanced users, explore the depth of our training resources and unleash your proficiency. Take the first step towards mastery today with our free trial offer!"
+        title: "Industry Expectations for IT Freshers & HR Hiring Process",
+        content: "Learn about the current expectations and skills required by the IT industry for fresh graduates. Gain insights into what employers are looking for and how to prepare yourself for a successful career. Understand the HR hiring process, including what HR professionals look for during interviews and how you can stand out in the hiring process." ,
+      
     }
 ]
 function Info() {

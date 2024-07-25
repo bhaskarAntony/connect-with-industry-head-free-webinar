@@ -5,46 +5,47 @@ const allFaqs = {
   "faq": [
     {
         "title": "quest1",
-        "quest": "What is the purpose of the 3-day free trial classes?",
-        "ans":  "The 3-day free trial classes are designed to give participants a glimpse into our software training programs, allowing them to experience our teaching style, course content, and instructor expertise before committing to the full course"
+        "quest": "What is the focus of the webinar?",
+        "ans": "The webinar focuses on providing an overview of HCL, ways of working in the IT industry, industry expectations from freshers, and the HR hiring process."
     },
     {
         "title": "quest2",
-        "quest": "How do I register for the free trial classes?",
-        "ans":  "You can register for the free trial classes by filling out the registration form on our website or contacting our registration team directly."
+        "quest": "Who is the speaker?",
+        "ans": "Mr. Gururaj Godakindi, Global Program Manager at HCL Technologies."
     },
     {
         "title": "quest3",
-        "quest": "Is there any cost associated with the trial classes?",
-        "ans":  "No, the 3-day trial classes are completely free of charge. There are no hidden fees or obligations."
+        "quest": "How can I join the webinar?",
+        "ans": "You can join the webinar by registering on our website and using the provided link to attend on the specified date and time."
     },
     {
         "title": "quest4",
-        "quest": "What topics will be covered during the trial period?",
-        "ans":  "The trial classes will cover introductory topics in full-stack development, digital marketing, data science, and cloud computing/DevOps, giving participants a broad overview of each field."
+        "quest": "Will there be an opportunity to ask questions?",
+        "ans": "Yes, there will be a Q & A session where you can clear your doubts with the industry expert."
     },
     {
         "title": "quest5",
-        "quest": "Are the trial classes conducted online or in-person?",
-        "ans":  "Currently, the trial classes are conducted online through virtual classrooms to ensure accessibility for participants from anywhere."
+        "quest": "Is there any cost to attend the webinar?",
+        "ans": "No, the webinar is free of charge."
     },
     {
         "title": "quest6",
-        "quest": "What are the requirements to participate in the trial classes?",
-        "ans":  "There are no specific requirements to participate in the trial classes. However, having a basic understanding of computer operations and internet usage would be beneficial."
+        "quest": "What topics will be covered during the webinar?",
+        "ans": "The webinar will cover an overview of HCL, ways of working in the IT industry, industry expectations from freshers, and the HR hiring process."
     },
     {
-      "title": "quest7",
-      "quest": "Will I receive a certificate after completing the trial classes?",
-      "ans":  "As the trial classes are short introductory sessions, we do not provide certificates for completion. However, participants will receive a participation acknowledgment."
-  },
-  {
-    "title": "quest8",
-    "quest": "What happens after the trial period ends?",
-    "ans":  "At the end of the trial period, you will have the option to enroll in the full course if you wish to continue your learning journey with us. Our enrollment team will provide you with further information on how to proceed."
-},
-]
+        "title": "quest7",
+        "quest": "Are the webinars conducted online or in-person?",
+        "ans": "Currently, the webinars are conducted online through virtual classrooms to ensure accessibility for participants from anywhere."
+    },
+    {
+        "title": "quest8",
+        "quest": "What happens after the webinar?",
+        "ans": "After the webinar, you will have the opportunity to enroll in further courses if you wish to continue your learning journey with us. Our enrollment team will provide you with further information on how to proceed."
+    }
+  ]
 }
+
 
 function FAQ() {
   return (
